@@ -14,15 +14,15 @@ public class Averager{
    double averageScores = 0;
    int numScores = 0;
    
-   System.out.print("Please enter your test scores, or -5 to quit.");
+   System.out.print("Please enter your test scores, or -1 to quit.");
    double addScores = scnr.nextInt();
-   while (addScores != -5) {
+   while (addScores != -1) {
       numScores = numScores + 1; 
-      averageScores = (averageScores + addScores)/numScores;
-      System.out.println("Please enter another score or -5 to quit.");
+      averageScores = averageScores + addScores;
+      System.out.println("Please enter another score or -1 to quit.");
       addScores = scnr.nextDouble();
    }
    
-   System.out.println("The averagae of your scores is " +averageScores);
+   System.out.println("The averagae of your scores is " +averageScores/numScores);
    }
  }
