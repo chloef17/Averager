@@ -12,11 +12,13 @@ public class Averager{
    public static void main (String [] args){
    Scanner scnr = new Scanner(System.in);
    double averageScores = 0;
+   int numScores = 0;
    
    System.out.print("Please enter your test scores, or -5 to quit.");
    double addScores = scnr.nextInt();
    while (addScores != -5) {
-      averageScores = averageScores + addScores/3;
+      numScores = numScores + 1; 
+      averageScores = (averageScores + addScores)/numScores;
       System.out.println("Please enter another score or -5 to quit.");
       addScores = scnr.nextDouble();
    }
